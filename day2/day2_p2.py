@@ -1,14 +1,11 @@
 #!/usr/bin/env python
 
 f = open('input.txt', 'r')
-count = 0
-depth = 0
-forward = 0
-aim = 0
+depth, forward, aim = 0, 0, 0
+
 for line in f:
-    line = line.replace('\n', '')    # remove '\n' only
+    line = line.replace('\n', '')
     chunks = line.split(' ')
-    count += 1
     thislinenumber = int(chunks[1])
     thislinetxt = chunks[0]
     if thislinetxt == "down":
@@ -21,5 +18,5 @@ for line in f:
     else:
         print("error!")
 f.close()
-print("depth: {} forward:{} tot:{} multi:{}".format(depth, forward, count, depth*forward))
+print("multiply your final horizontal position by your final depth:{}".format(depth*forward))
 

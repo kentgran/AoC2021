@@ -1,10 +1,7 @@
 #!/usr/bin/env python
 
 f = open('input.txt', 'r')
-count = 0
-up = 0
-down = 0
-forward = 0
+up, down, forward = 0, 0, 0
 litenliste, litenliste2 = [], []
 
 def listen(_langliste, _posisjon, rating):
@@ -34,7 +31,7 @@ def listen(_langliste, _posisjon, rating):
 
 
 for line in f:
-    line = line.replace('\n', '')  # remove '\n' only
+    line = line.replace('\n', '')
     litenliste.append(line)
     litenliste2.append(line)
 i = 0
@@ -44,8 +41,6 @@ while i < 12:
     i += 1
 ox = int(litenliste[0], 2)
 scb = int(litenliste2[0], 2)
-print("ok, litenliste: {} = {}".format(litenliste, ox))
-print("ok, litenliste2: {} = {}".format(litenliste2, scb))
 print("multiplied: {}".format(ox * scb))
 
 

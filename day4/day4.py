@@ -68,7 +68,7 @@ flagg = False
 brettCount = 0
 
 for line in f:
-    line = line.replace('\n', '')  # remove '\n' only
+    line = line.replace('\n', '')
     if count == 0:
         bingoserie = list(map(int, line.split(',')))
     elif line == "":
@@ -90,7 +90,6 @@ while l < len(bingoserie):
         testbrett[k].setFlagTrix(talletEr)
         k += 1
     if l > 4:
-        print("sjekk!")
         # sjekk om vi har fått bingo
         m = 0
         while m < len(testbrett):
